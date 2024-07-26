@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 ## Configuration
 
-You need to configure your API key in the `app.py` file. Replace `YOUR GEMINI KEY`[API_KEY](https://aistudio.google.com/app/apikey) 
+You need to configure your API key in the `app.py` file. Replace `YOUR GEMINI KEY`Get your API key from here →[API_KEY](https://aistudio.google.com/app/apikey) 
 
 ## Running the App
 
