@@ -18,7 +18,7 @@ You need to configure your API key in the `app.py` file. Replace `YOUR GEMINI KE
 To run the app, use the following command:
 
 ```
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 
