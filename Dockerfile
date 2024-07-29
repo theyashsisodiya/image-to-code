@@ -4,14 +4,12 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy only requirements.txt first
-COPY requirements.txt /app/
-
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
 # Copy the rest of the application code
 COPY . /app/
+
+# Set the path to the pre-installed dependencies
+ENV PIP_TARGET=/app/deps
+ENV PYTHONPATH=$PIP_TARGET
 
 # Make port 8501 available to the world outside this container
 EXPOSE 8501
