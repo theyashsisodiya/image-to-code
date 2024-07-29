@@ -9,8 +9,6 @@ COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-#path not found so we show the path to docker
-#ENV PATH="$PATH:/path/to/streamlit/bin"
 
 # Make port 8501 available to the world outside this container
 EXPOSE 8501
@@ -19,4 +17,4 @@ EXPOSE 8501
 ENV NAME World
 
 # Run Streamlit when the container launches
-CMD ["streamlit", "run", "app.py"]
+CMD ["python", "-m", "streamlit", "run", "app.py"]
