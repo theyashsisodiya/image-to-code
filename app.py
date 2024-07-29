@@ -4,7 +4,7 @@ from PIL import Image
 import google.generativeai as genai
 
 # Configure the API key directly in the script
-API_KEY = 'AIzaSyBjU1eyXgHdRolndQdUHdKYCPTq8hd4rT0'
+API_KEY = 'AIzaSyBX096kvDs7hQMuhPo_3tek9UD4gFhnx64'
 genai.configure(api_key=API_KEY)
 
 # Generation configuration
@@ -51,8 +51,8 @@ def send_message_to_model(message, image_path):
 
 # Streamlit app
 def main():
-    st.title("Gemini 1.5 Pro, UI to Code 👨‍💻 ")
-    st.subheader('Made with ❤️ by [Skirano](https://x.com/skirano)')
+    st.title("Image to Code 👨‍💻 ")
+    st.subheader('Convert IMAGE INTO WEBSITE!')
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
