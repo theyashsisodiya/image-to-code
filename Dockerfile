@@ -18,4 +18,4 @@ EXPOSE 8501
 ENV NAME World
 
 # Run Streamlit when the container launches
-CMD ["python", "-m", "streamlit", "run", "app.py"]
+CMD ["python", "-m", "streamlit", "run", "app.py", "--server.port=8501"]
