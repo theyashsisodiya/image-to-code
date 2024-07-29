@@ -7,8 +7,13 @@ WORKDIR /app
 # Copy the rest of the application code
 COPY . /app/
 
+# Copy the Streamlit config file
+COPY streamlit.config.toml /root/.streamlit/config.toml
+
+# Install dependencies in /app/deps
+RUN pip install --no-cache-dir --target=/app/deps -r requirements.txt
+
 # Set environment variables for the dependencies
-ENV PIP_TARGET=/app/deps
 ENV PYTHONPATH=/app/deps
 
 # Make port 8501 available to the world outside this container
@@ -18,4 +23,4 @@ EXPOSE 8501
 ENV NAME World
 
 # Run Streamlit when the container launches
-CMD ["python", "-m", "streamlit", "run", "app.py", "--server.port=8501"]
+CMD ["streamlit", "run", "app.py", "--server.port=8501"]
