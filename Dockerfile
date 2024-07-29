@@ -7,9 +7,9 @@ WORKDIR /app
 # Copy the rest of the application code
 COPY . /app/
 
-# Set the path to the pre-installed dependencies
+# Set environment variables for the dependencies
 ENV PIP_TARGET=/app/deps
-ENV PYTHONPATH=$PIP_TARGET
+ENV PYTHONPATH=/app/deps
 
 # Make port 8501 available to the world outside this container
 EXPOSE 8501
