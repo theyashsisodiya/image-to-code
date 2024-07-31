@@ -3,7 +3,7 @@ import pathlib
 from PIL import Image
 import google.generativeai as genai
 # Configure the API key directly in the script
-API_KEY = 'AIzaSyDEssPxnfAFbKOiu3T_e_N6UAbz7kZsiwY'
+API_KEY = 'AIzaSyC2i99VRaGG15tKwXBWlCC9V1U7kwjE1Ps'
 genai.configure(api_key=API_KEY)
 
 # Generation configuration
