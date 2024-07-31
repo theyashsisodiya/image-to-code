@@ -2,7 +2,6 @@ import streamlit as st
 import pathlib
 from PIL import Image
 import google.generativeai as genai
-
 # Configure the API key directly in the script
 API_KEY = 'AIzaSyBX096kvDs7hQMuhPo_3tek9UD4gFhnx64'
 genai.configure(api_key=API_KEY)
